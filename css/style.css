@@ -863,8 +863,12 @@ h1 {
   color: #ccc;
   weight: 300; }
 
-figure {
-  margin: auto; }
+.content {
+  position: relative;
+  z-index: 2;
+  background: white;
+  margin-bottom: 300px;
+}
 
 .content article {
   padding: 100px 0;
@@ -873,7 +877,9 @@ figure {
   text-align: center; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  transform: scale(1);
+}
 
 #bird-box {
   position: relative;
@@ -884,6 +890,7 @@ img {
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
+  z-index: 3;
 }
 
 #logo {
@@ -918,4 +925,137 @@ img {
   position: absolute;
   left: 50%;
   margin-left: -480px;
+}
+
+.clothes-pics figure {
+  margin-bottom: 20px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+figure {
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+figure.is-showing {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+figure img {
+  display: block;
+}
+
+figure:hover figcaption {
+  left: 0%;
+}
+
+figure:hover img {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: -100%;
+  background-color: black;
+  color: white;
+  padding: 2px 8px;
+  font-size: 11px;
+  transition: all 0.3s ease-in-out;
+}
+
+.large-window {
+  height: 640px;
+  background-image: url('../images/model2.jpg');
+  background-position: center 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.window-tint {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-text {
+  color: white;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+.promo-text strong {
+  display: block;
+  font-size: 30px;
+}
+
+.promo-text a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+}
+.promo-text a:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-posts {
+  margin-top: 100px;
+}
+
+.blog-posts .post {
+  border: 1px solid #e1e1e1;
+  padding: 20px 20px 0;
+  position: relative;
+  background: white;
+}
+
+.post-1 {
+  transform: translate(100px, 20px);
+}
+
+.post-2 {
+  z-index: 2;
+}
+
+.post-3 {
+  transform: translate(-100px, 20px);
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+}
+
+.footer-stuff {
+  max-width: 640px;
+  margin: 0 auto;
 }
