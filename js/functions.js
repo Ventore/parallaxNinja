@@ -1,4 +1,4 @@
-var pContainerHeight = $('.bird-box').height();
+var pContainerHeight = $('#bird-box').height();
 
 $(window).scroll(function(){
 
@@ -6,15 +6,15 @@ $(window).scroll(function(){
 
   if (wScroll <= pContainerHeight) {
 
-    $('.logo').css({
+    $('#logo').css({
       'transform' : 'translate(0px, '+ wScroll /2 +'%)'
     });
 
-    $('.back-bird').css({
+    $('#back-bird').css({
       'transform' : 'translate(0px, '+ wScroll /4 +'%)'
     });
 
-    $('.fore-bird').css({
+    $('#fore-bird').css({
       'transform' : 'translate(0px, -'+ wScroll /40 +'%)'
     });
 
